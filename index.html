@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    /* Global styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ff7e5f, #feb47b); /* Gradient background */
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+
+    .menu-section {
+      padding: 20px;
+    }
+
+    .menu-category {
+      margin-bottom: 30px;
+    }
+
+    .menu-category h3 {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .menu-item p {
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .menu-item p:nth-child(2) {
+      color: #ff7e5f; /* Price color */
+    }
+    /* Media query for responsive layout */
+    @media (max-width: 768px) {
+      .menu-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-item {
+        width: 80%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Restaurant Menu</h1>
+  </header>
+  <section id="menu">
+    <h2>Our Menu</h2>
+
+    <!-- Veg Soups -->
+    <div class="menu-category">
+      <h3>Veg Soups</h3>
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="images/vegsweetcornsoup.jpg" alt="Veg Sweet Corn Soup">
+          <p>Veg Sweet Corn Soup</p>
+          <p>₹90</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/Veg Manchow Soup.jpg" alt="Veg Manchow Soup">
+          <p>Veg Manchow Soup</p>
+          <p>₹90</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/Veg Hot and Sour Soup.jpg" alt="Veg Hot and Sour Soup">
+          <p>Veg Hot and Sour Soup</p>
+          <p>₹90</p>
+        </div>
+      </div>
+    </div>
+
+  <section class="menu-section">
+    <!-- Non Veg Soup -->
+    <div class="menu-category">
+      <h3>Non Veg Soup</h3>
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="chicken_sweet_corn_soup.jpg" alt="Chicken Sweet Corn Soup">
+          <p>Chicken Sweet Corn Soup</p>
+          <p>₹120</p>
+        </div>
+        <div class="menu-item">
+          <img src="chicken_manchow_soup.jpg" alt="Chicken Manchow Soup">
+          <p>Chicken Manchow Soup</p>
+          <p>₹120</p>
+        </div>
+        <div class="menu-item">
+          <img src="chicken_hot_and_sour_soup.jpg" alt="Chicken Hot and Sour Soup">
+          <p>Chicken Hot and Sour Soup</p>
+          <p>₹120</p>
+        </div>
+        <div class="menu-item">
+          <img src="chicken_lemon_coriander_soup.jpg" alt="Chicken Lemon Coriander Soup">
+          <p>Chicken Lemon Coriander Soup</p>
+          <p>₹130</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Veg Starters -->
+    <div class="menu-category">
+      <h3>Veg Starters</h3>
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="veg_manchurian.jpg" alt="Veg Manchurian">
+          <p>Veg Manchurian</p>
+          <p>₹120</p>
+        </div>
+        <div class="menu-item">
+          <img src="aalu_manchurian.jpg" alt="Aalu Manchurian">
+          <p>Aalu Manchurian</p>
+          <p>₹120</p>
+        </div>
+        <div class="menu-item">
+          <img src="gobi_manchurian.jpg" alt="Gobi Manchurian">
+          <p>Gobi Manchurian</p>
+          <p>₹120</p>
+        </div>
+        <div class="menu-item">
+          <img src="baby_corn_65.jpg" alt="Baby Corn 65">
+          <p>Baby Corn 65</p>
+          <p>₹140</p>
+        </div>
+        <div class="menu-item">
+          <img src="baby_corn_manchurian.jpg" alt="Baby Corn Manchurian">
+          <p>Baby Corn Manchurian</p>
+          <p>₹140</p>
+        </div>
+        <div class="menu-item">
+          <img src="chilli_baby_corn.jpg" alt="Chilli Baby Corn">
+          <p>Chilli Baby Corn</p>
+          <p>₹140</p>
+        </div>
+        <div class="menu-item">
+          <img src="chilli_mushroom.jpg" alt="Chilli Mushroom">
+          <p>Chilli Mushroom</p>
+          <p>₹140</p>
+        </div>
+        <div class="menu-item">
+          <img src="mushroom_manchurian.jpg" alt="Mushroom Manchurian">
+          <p>Mushroom Manchurian</p>
+          <p>₹140</p>
+        </div>
+        <div class="menu-item">
+          <img src="paneer_manchurian.jpg" alt="Paneer Manchurian">
+          <p>Paneer Manchurian</p>
+          <p>₹180</p>
+        </div>
+        <div class="menu-item">
+          <img src="chilli_paneer.jpg" alt="Chilli Paneer">
+          <p>Chilli Paneer</p>
+          <p>₹180</p>
+        </div>
+        <div class="menu-item">
+          <img src="paneer_65.jpg" alt="Paneer 65">
+          <p>Paneer 65</p>
+          <p>₹180</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Non Veg Starters -->
+    <div class="menu-category">
+      <h3>Non Veg Starters</h3>
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="chicken_manchurian.jpg" alt="Chicken Manchurian">
+          <p>Chicken Manchurian</p>
+          <p>₹200</p>
+        </div>
+        <div class="menu-item">
+          <img src="chilli_chicken.jpg" alt="Chilli Chicken">
+          <p>Chilli Chicken</p>
+          <p>₹220</p>
+        </div>
+        <div class="menu-item">
+          <img src="chicken_65.jpg" alt="Chicken 65">
+          <p>Chicken 65</p>
+          <p>₹220</p>
+        </div>
+        <div class="menu-item">
+          <img src="dragon_chicken.jpg" alt="Dragon Chicken">
+          <p>Dragon Chicken</p>
+          <p>₹240</p>
+        </div>
+        <div class="menu-item">
+          <img src="lemon_chicken.jpg" alt="Lemon Chicken">
+          <p>Lemon Chicken</p>
+          <p>₹250</p>
+        </div>
+        <div class="menu-item">
+          <img src="rr_chicken.jpg" alt="RR Chicken">
+          <p>RR Chicken</p>
+          <p>₹250</p>
+        </div>
+        <div class="menu-item">
+          <img src="honey_chicken.jpg" alt="Honey Chicken">
+          <p>Honey Chicken</p>
+          <p>₹250</p>
+        </div>
+        <div class="menu-item">
+          <img src="boneless_chicken_pakodi.jpg" alt="Boneless Chicken Pakodi">
+          <p>Boneless Chicken Pakodi</p>
+          <p>₹250</p>
+        </div>
+        <div class="menu-item">
+          <img src="wait_wings.jpg" alt="Wait Wings (8pc)">
+          <p>Wait Wings (8pc)</p>
+          <p>₹260</p>
+        </div>
+        <div class="menu-item">
+          <img src="wait_lollipops.jpg" alt="Wait Lollipops (6pc)">
+          <p>Wait Lollipops (6pc)</p>
+          <p>₹280</p>
+        </div>
+        <div class="menu-item">
+          <img src="chilli_france.jpg" alt="Chilli France">
+          <p>Chilli France</p>
+          <p>₹280</p>
+        </div>
+        <div class="menu-item">
+          <img src="loose_france.jpg" alt="Loose France">
+          <p>Loose France</p>
+          <p>₹280</p>
+        </div>
+        <div class="menu-item">
+          <img src="chilli_mutton.jpg" alt="Chilli Mutton">
+          <p>Chilli Mutton</p>
+          <p>₹300</p>
+        </div>
+        <div class="menu-item">
+          <img src="mutton_65.jpg" alt="Mutton 65">
+          <p>Mutton 65</p>
+          <p>₹300</p>
+        </div>
+      </div>
+    </div>
+    <!-- Veg Biryani -->
+    <div class="menu-category">
+        <h3>Veg Biryani</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="plain_biryani_rice.jpg" alt="Plain Biryani Rice">
+            <p>Plain Biryani Rice</p>
+            <p>₹110</p>
+          </div>
+          <div class="menu-item">
+            <img src="veg_biryani.jpg" alt="Veg Biryani">
+            <p>Veg Biryani</p>
+            <p>₹130</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_veg_biryani.jpg" alt="SP Veg Biryani">
+            <p>SP Veg Biryani</p>
+            <p>₹160</p>
+          </div>
+          <div class="menu-item">
+            <img src="paneer_biryani.jpg" alt="Paneer Biryani">
+            <p>Paneer Biryani</p>
+            <p>₹180</p>
+          </div>
+          <div class="menu-item">
+            <img src="kaju_paneer_biryani.jpg" alt="Kaju Paneer Biryani">
+            <p>Kaju Paneer Biryani</p>
+            <p>₹200</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Non Veg Biryani -->
+      <div class="menu-category">
+        <h3>Non Veg Biryani</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="dum_biryani.jpg" alt="Dum Biryani">
+            <p>Dum Biryani</p>
+            <p>₹190</p>
+          </div>
+          <div class="menu-item">
+            <img src="fry_piece_biryani.jpg" alt="Fry Piece Biryani">
+            <p>Fry Piece Biryani</p>
+            <p>₹190</p>
+          </div>
+          <div class="menu-item">
+            <img src="fry_biryani_half.jpg" alt="Fry Biryani Half">
+            <p>Fry Biryani Half</p>
+            <p>₹130</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_chicken_biryani.jpg" alt="SP Chicken Biryani">
+            <p>SP Chicken Biryani</p>
+            <p>₹250</p>
+          </div>
+          <div class="menu-item">
+            <img src="mughlai_biryani.jpg" alt="Mughlai Biryani">
+            <p>Mughlai Biryani</p>
+            <p>₹250</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_mughlai_biryani.jpg" alt="SP Mughlai Biryani">
+            <p>SP Mughlai Biryani</p>
+            <p>₹270</p>
+          </div>
+          <div class="menu-item">
+            <img src="lollipop_biryani.jpg" alt="Lollipop Biryani">
+            <p>Lollipop Biryani</p>
+            <p>₹270</p>
+          </div>
+          <div class="menu-item">
+            <img src="wins_biryani.jpg" alt="Wins Biryani">
+            <p>Wins Biryani</p>
+            <p>₹270</p>
+          </div>
+          <div class="menu-item">
+            <img src="kabab_biryani.jpg" alt="Kabab Biryani">
+            <p>Kabab Biryani</p>
+            <p>₹280</p>
+          </div>
+          <div class="menu-item">
+            <img src="prawns_biryani.jpg" alt="Prawns Biryani">
+            <p>Prawns Biryani</p>
+            <p>₹280</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_prawns_biryani.jpg" alt="SP Prawns Biryani">
+            <p>SP Prawns Biryani</p>
+            <p>₹290</p>
+          </div>
+          <div class="menu-item">
+            <img src="mutton_biryani.jpg" alt="Mutton Biryani">
+            <p>Mutton Biryani</p>
+            <p>₹300</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_mutton_biryani.jpg" alt="SP Mutton Biryani">
+            <p>SP Mutton Biryani</p>
+            <p>₹320</p>
+          </div>
+          <div class="menu-item">
+            <img src="mixed_biryani.jpg" alt="Mixed Biryani">
+            <p>Mixed Biryani</p>
+            <p>₹320</p>
+          </div>
+          <div class="menu-item">
+            <img src="mixed_mughlai_biryani.jpg" alt="Mixed Mughlai Biryani">
+            <p>Mixed Mughlai Biryani</p>
+            <p>₹400</p>
+          </div>
+          <div class="menu-item">
+            <img src="dilkhush_biryani.jpg" alt="Dilkhush Biryani">
+            <p>Dilkhush Biryani</p>
+            <p>₹400</p>
+          </div>
+          <div class="menu-item">
+            <img src="combo_biryani.jpg" alt="Combo Biryani">
+            <p>Combo Biryani (Drink Free)</p>
+            <p>₹599</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Veg Fried Rice -->
+      <div class="menu-category">
+        <h3>Veg Fried Rice</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="veg_fried_rice.jpg" alt="Veg Fried Rice">
+            <p>Veg Fried Rice</p>
+            <p>₹120</p>
+          </div>
+          <div class="menu-item">
+            <img src="jeera_rice.jpg" alt="Jeera Rice">
+            <p>Jeera Rice</p>
+            <p>₹120</p>
+          </div>
+          <div class="menu-item">
+            <img src="veg_manchuria_fried_rice.jpg" alt="Veg Manchuria Fried Rice">
+            <p>Veg Manchuria Fried Rice</p>
+            <p>₹130</p>
+          </div>
+          <div class="menu-item">
+            <img src="schezwan_veg_fried_rice.jpg" alt="Schezwan Veg Fried Rice">
+            <p>Schezwan Veg Fried Rice</p>
+            <p>₹130</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_veg_fried_rice.jpg" alt="SP Veg Fried Rice">
+            <p>SP Veg Fried Rice</p>
+            <p>₹160</p>
+          </div>
+          <div class="menu-item">
+            <img src="mushroom_fried_rice.jpg" alt="Mushroom Fried Rice">
+            <p>Mushroom Fried Rice</p>
+            <p>₹150</p>
+          </div>
+          <div class="menu-item">
+            <img src="baby_corn_fried_rice.jpg" alt="Baby Corn Fried Rice">
+            <p>Baby Corn Fried Rice</p>
+            <p>₹150</p>
+          </div>
+          <div class="menu-item">
+            <img src="paneer_fried_rice.jpg" alt="Paneer Fried Rice">
+            <p>Paneer Fried Rice</p>
+            <p>₹160</p>
+          </div>
+          <div class="menu-item">
+            <img src="kaju_paneer_fried_rice.jpg" alt="Kaju Paneer Fried Rice">
+            <p>Kaju Paneer Fried Rice</p>
+            <p>₹180</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Non Veg Fried Rice -->
+      <div class="menu-category">
+        <h3>Non Veg Fried Rice</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="egg_fried_rice.jpg" alt="Egg Fried Rice">
+            <p>Egg Fried Rice</p>
+            <p>₹140</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_fried_rice.jpg" alt="Chicken Fried Rice">
+            <p>Chicken Fried Rice</p>
+            <p>₹160</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_schezwan_fried_rice.jpg" alt="Chicken Schezwan Fried Rice">
+            <p>Chicken Schezwan Fried Rice</p>
+            <p>₹180</p>
+          </div>
+          <div class="menu-item">
+            <img src="biryani_rice_fried_rice.jpg" alt="Biryani Rice Fried Rice">
+            <p>Biryani Rice Fried Rice</p>
+            <p>₹180</p>
+          </div>
+          <div class="menu-item">
+            <img src="roast_fried_rice.jpg" alt="Roast Fried Rice">
+            <p>Roast Fried Rice</p>
+            <p>₹200</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_chicken_fried_rice.jpg" alt="SP Chicken Fried Rice">
+            <p>SP Chicken Fried Rice</p>
+            <p>₹200</p>
+          </div>
+          <div class="menu-item">
+            <img src="mughlai_fried_rice.jpg" alt="Mughlai Fried Rice">
+            <p>Mughlai Fried Rice</p>
+            <p>₹240</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_mughlai_fried_rice.jpg" alt="SP Mughlai Fried Rice">
+            <p>SP Mughlai Fried Rice</p>
+            <p>₹260</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_prawns_fried_rice.jpg" alt="SP Prawns Fried Rice">
+            <p>SP Prawns Fried Rice</p>
+            <p>₹280</p>
+          </div>
+          <div class="menu-item">
+            <img src="sp_mutton_fried_rice.jpg" alt="SP Mutton Fried Rice">
+            <p>SP Mutton Fried Rice</p>
+            <p>₹300</p>
+          </div>
+          <div class="menu-item">
+            <img src="mixed_fried_rice.jpg" alt="Mixed Fried Rice">
+            <p>Mixed Fried Rice</p>
+            <p>₹320</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Veg Noodles -->
+      <div class="menu-category">
+        <h3>Veg and Non Veg Noodles</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="veg_noodles.jpg" alt="Veg Noodles">
+            <p>Veg Noodles</p>
+            <p>₹110</p>
+          </div>
+          <div class="menu-item">
+            <img src="schezwan_veg_noodles.jpg" alt="Schezwan Veg Noodles">
+            <p>Schezwan Veg Noodles</p>
+            <p>₹120</p>
+          </div>
+          <div class="menu-item">
+            <img src="egg_noodles.jpg" alt="Egg Noodles">
+            <p>Egg Noodles</p>
+            <p>₹130</p>
+          </div>
+          <div class="menu-item">
+            <img src="egg_schezwan_noodles.jpg" alt="Egg Schezwan Noodles">
+            <p>Egg Schezwan Noodles</p>
+            <p>₹140</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_noodles.jpg" alt="Chicken Noodles">
+            <p>Chicken Noodles</p>
+            <p>₹150</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_schezwan_noodles.jpg" alt="Chicken Schezwan Noodles">
+            <p>Chicken Schezwan Noodles</p>
+            <p>₹160</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Veg Curries -->
+      <div class="menu-category">
+        <h3>Veg Curries</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="mixed_veg_curry.jpg" alt="Mixed Veg Curry">
+            <p>Mixed Veg Curry</p>
+            <p>₹150</p>
+          </div>
+          <div class="menu-item">
+            <img src="paneer_butter_masala.jpg" alt="Paneer Butter Masala Curry">
+            <p>Paneer Butter Masala Curry</p>
+            <p>₹180</p>
+          </div>
+          <div class="menu-item">
+            <img src="kaju_paneer_curry.jpg" alt="Kaju Paneer Curry">
+            <p>Kaju Paneer Curry</p>
+            <p>₹200</p>
+          </div>
+          <div class="menu-item">
+            <img src="kaju_tamatar_curry.jpg" alt="Kaju Tamatar Curry">
+            <p>Kaju Tamatar Curry</p>
+            <p>₹160</p>
+          </div>
+          <div class="menu-item">
+            <img src="palak_paneer.jpg" alt="Palak Paneer">
+            <p>Palak Paneer</p>
+            <p>₹200</p>
+          </div>
+          <div class="menu-item">
+            <img src="methi_chaman_curry.jpg" alt="Methi Chaman Curry">
+            <p>Methi Chaman Curry</p>
+            <p>₹200</p>
+          </div>
+          <div class="menu-item">
+            <img src="mushroom_curry.jpg" alt="Mushroom Curry">
+            <p>Mushroom Curry</p>
+            <p>₹160</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Non Veg Curries -->
+      <div class="menu-category">
+        <h3>Non Veg Curries</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="chicken_butter_masala_curry.jpg" alt="Chicken Butter Masala Curry">
+            <p>Chicken Butter Masala Curry</p>
+            <p>₹220</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_rost_curry.jpg" alt="Chicken Rost Curry">
+            <p>Chicken Rost Curry</p>
+            <p>₹180</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_mughlai_curry.jpg" alt="Chicken Mughlai Curry">
+            <p>Chicken Mughlai Curry</p>
+            <p>₹230</p>
+          </div>
+          <div class="menu-item">
+            <img src="chicken_lollipop_curry.jpg" alt="Chicken Lollipop Curry">
+            <p>Chicken Lollipop Curry (4pc)</p>
+            <p>₹250</p>
+          </div>
+          <div class="menu-item">
+            <img src="prawns_curry.jpg" alt="Prawns Curry">
+            <p>Prawns Curry</p>
+            <p>₹260</p>
+          </div>
+          <div class="menu-item">
+            <img src="mutton_curry.jpg" alt="Mutton Curry">
+            <p>Mutton Curry</p>
+            <p>₹290</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Pulka -->
+      <div class="menu-category">
+        <h3>Pulka</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="pulka.jpg" alt="Pulka">
+            <p>Pulka</p>
+            <p>₹8</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Curd Rice -->
+      <div class="menu-category">
+        <h3>Curd Rice</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="curd_rice.jpg" alt="Curd Rice">
+            <p>Curd Rice</p>
+            <p>₹90</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mocktail -->
+      <div class="menu-category">
+        <h3>Mocktail</h3>
+        <div class="menu-container">
+          <div class="menu-item">
+            <img src="mint_mojito.jpg" alt="Mint Mojito">
+            <p>Mint Mojito</p>
+            <p>₹60</p>
+          </div>
+          <div class="menu-item">
+            <img src="mango_mojito.jpg" alt="Mango Mojito">
+            <p>Mango Mojito</p>
+            <p>₹60</p>
+          </div>
+          <div class="menu-item">
+            <img src="orange_sunset_mojito.jpg" alt="Orange Sunset Mojito">
+            <p>Orange Sunset Mojito</p>
+            <p>₹60</p>
+          </div>
+          <div class="menu-item">
+            <img src="virgin_mojito.jpg" alt="Virgin Mojito">
+            <p>Virgin Mojito</p>
+            <p>₹60</p>
+          </div>
+          <div class="menu-item">
+            <img src="blue_lagon_mojito.jpg" alt="Blue Lagoon Mojito">
+            <p>Blue Lagoon Mojito</p>
+            <p>₹60</p>
+          </div>
+          <div class="menu-item">
+            <img src="green_tempation_mojito.jpg" alt="Green Temptation Mojito">
+            <p>Green Temptation Mojito</p>
+            <p>₹60</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  </html>
